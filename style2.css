@@ -1,0 +1,19 @@
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: black;
+    width: 700px;
+    height: 300px;
+    background: linear-gradient(to right,black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    margin: 1rem auto;
+    transition: all .3s linear;
+    border: 5px dotted pink;
+}
+.container:hover{
+    background-position-x:0;
+    color: azure;
+}

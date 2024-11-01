@@ -4,20 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Exercise</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div class="container">
-    <!-- AUDIO HTML GOES HERE -->
+    <h2>Audio</h2>
+    <div class="audio">
+      <audio src="./assets/audio/piano.wav"  controls muted loop></audio>
+    </div> 
 
-    <!-- VIDEO HTML GOES HERE -->
+    <h2>Video</h2>
+    <div class="video">
+      <video src="./assets/video/ocean.mp4" controls loop poster="./assets/images/poster.jpg"></video>
+    </div>
+     
+    <h2>Image</h2>
+    <div class="image">
+      <img src="./assets/images/fruit_table.jpg" alt="" usemap="#fruit" >
+      <map name="fruit">
+        <area shape="rect" coords="100,0,300,300" href="https://en.wikipedia.org/wiki/Lavandula" target="_blank" alt="lavan" >
+        <area shape="rect" coords="300,100,500,300" href="https://en.wikipedia.org/wiki/Coffee" target="_blank" alt="coffee">
+        <area shape="rect" coords="300,400,600,600" href="https://en.wikipedia.org/wiki/Orange_(fruit)" target="_blank" alt="lavan">
+      </map>
+    </div>
 
-    <!-- IMAGE MAP HTML GOES HERE-->
-
-    <!-- CANVAS HTML GOES HERE -->
+    <canvas id="myCanvas" width="500" height="500" style="border:5px solid #000000;">
+      </canvas>
   </div>
 
   <script>
-    /* CANVAS JAVASCRIPT GOES HERE */
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+    context.lineWidth=7;
+
+    context.strokeStyle="red";
+    context.beginPath();
+    context.moveTo(0, 0);
+    context.lineTo(500, 0);
+    context.stroke();
+    context.strokeStyle="blue";
+    context.beginPath();
+    context.moveTo(500, 0);
+    context.lineTo(500, 500);
+    context.stroke();
+    context.strokeStyle="yellow";
+    context.beginPath();
+    context.moveTo(500, 500);
+    context.lineTo(0, 500);
+    context.stroke();
+    context.strokeStyle="pink";
+    context.beginPath();
+    context.moveTo(0, 500);
+    context.lineTo(0,0);
+    context.stroke();
+
   </script>
 </body>
 </html>
